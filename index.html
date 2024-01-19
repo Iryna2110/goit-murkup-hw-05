@@ -454,18 +454,21 @@
         <div class="footer-subscribe">
           <p class="footer-text-form">Subscribe</p>
           <form class="footer-form">
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              class="footer-input"
-            />
-            <button type="submit" class="subscribe-btn">
-              Subscribe
-              <svg width="24" height="24" class="send-icon">
-                <use href="./images/icons.svg#icon-send-icon"></use>
-              </svg>
-            </button>
+            <label for="email" class="footer-label">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                class="footer-input"
+              />
+              <button type="submit" class="subscribe-btn">
+                Subscribe
+                <svg width="24" height="24" class="send-icon">
+                  <use href="./images/icons.svg#icon-send-icon"></use>
+                </svg>
+              </button>
+            </label>
           </form>
         </div>
       </div>
@@ -480,10 +483,15 @@
         <p class="modal-text">Leave your contacts and we will call you back</p>
         <form class="modal-form">
           <div class="modal-field">
-            <label class="form-label" for="name">Name</label>
+            <label class="form-label" for="user-name">Name</label>
             <div class="input-wrap">
-              <input type="text" id="name" name="name" class="modal-input" />
-              <svg class="modal-icon" width="18" height="18">
+              <input
+                type="text"
+                id="user-name"
+                name="user-name"
+                class="modal-input"
+              />
+              <svg class="modal-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-name-icon"></use>
               </svg>
             </div>
@@ -493,39 +501,49 @@
             <label class="form-label" for="phone">Phone</label>
             <div class="input-wrap">
               <input type="tel" id="phone" name="phone" class="modal-input" />
-              <svg class="modal-icon" width="18" height="18">
+              <svg class="modal-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-tel-icon"></use>
               </svg>
             </div>
           </div>
 
           <div class="modal-field">
-            <label class="form-label" for="email">E-mail</label>
+            <label class="form-label" for="email">Email</label>
             <div class="input-wrap">
               <input type="email" id="email" name="email" class="modal-input" />
-              <svg class="modal-icon" width="18" height="18">
+              <svg class="modal-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-icon"></use>
               </svg>
             </div>
           </div>
 
           <div class="comment-field">
-            <label class="form-label" for="comment">Comment</label>
-            <textarea name="comment" id="comment" rows="8" class="comment">
-Text input</textarea
-            >
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+              class="comment"
+            ></textarea>
           </div>
+
           <div class="privacy-policy">
             <input
               type="checkbox"
-              id="licence"
-              name="licence"
-              class="privacy"
+              id="user-privacy"
+              name="user-privacy"
+              class="privacy visually-hidden"
+              value="true"
             />
-            <label for="licence" class="licence-label"
-              >I accept the terms and conditions of the
-              <span class="licence-accept">Privacy Policy</span></label
-            >
+            <label for="user-privacy" class="licence-label">
+              <span class="licence-accept">
+                <svg class="checkbox" width="8" height="10">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="user-policy">Privacy Policy</a>
+            </label>
           </div>
           <button type="submit" class="send-btn">Send</button>
         </form>
