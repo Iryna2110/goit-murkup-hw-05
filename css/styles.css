@@ -570,7 +570,6 @@ img {
     border: none;
     background-color: #4D5AE5;
     display: flex;
-    gap: 16px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
